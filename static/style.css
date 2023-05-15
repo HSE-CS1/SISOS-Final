@@ -21,13 +21,9 @@ h1,h2,h3,h4,h5,h6{
 
 .msg{
   padding:1.5rem;
-  background-color: #cafc34;
+  background-color:#cafc34;
   color:#1e1e1e;
-  border: 3px solid #6a8c03;
-  text-align:center;
-  border-radius:.75rem;
+  border:3px solid #88a72a;
   margin:.5rem auto;
+  text-align:center;
 }
-
-
-

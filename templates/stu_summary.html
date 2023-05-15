@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h3>Total Passes by Location for {{ student_name }}</h3>
+<h3>Passes for {{ stu_name }} By Location</h3>
 <table>
   <thead>
     <tr>
@@ -12,17 +12,18 @@
   </thead>
   <tbody>
     {% for row in rows %}
-      <tr>
-        <td>{{ row.total }}</td>
-        <td>{{ row.location }}</td>
-        <td><a href="/summary/{{ row.student_id }}/{{ row.location }}" class="clr"><i class="bi bi-info-square-fill"></i></a></td>
-      </tr>
+    <tr>
+      <td>{{ row.total }}</td>      
+      <td>{{ row.location }}</td>      
+      <td><a class="clr" href="/summary/{{ row.student_id }}/{{ row.location }}"><i class="bi bi-info-square-fill"></i></a></td>      
+    </tr>
     {% endfor %}
   </tbody>
+  
 </table>
 
 <h4>
-  <a href="/summary" role="button">Back to Summary</a>
+  <a href="/summary" role="button" class="secondary">Back to Summary</a>
 </h4>
 
 {% endblock %}
